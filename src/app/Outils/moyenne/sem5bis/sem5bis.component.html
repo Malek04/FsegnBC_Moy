@@ -1,0 +1,311 @@
+<div class="table table-bordered">
+    <form name="f" [formGroup]="moyenneform">
+        <table class="table ">
+            <thead>
+                <tr>
+                    <th scope="col" colspan="5"></th>
+                    <th scope="col">Moyenne</th>
+                    <th scope="col">Crédit</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <!--systèmes intégrés-->
+                <tr>
+                    <td scope="row" rowspan="3">Systèmes intégrés</td>
+                    <td>intégration des SI</td>
+                    <td>
+                        EX 
+                        <input type="text" formControlName="exSI" class="form-control form-control-sm" name="exSI" id="exSI">
+                        <small *ngIf="moyenneform.controls['exSI'].dirty && moyenneform.controls['exSI'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['exSI'].dirty && moyenneform.controls['exSI'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        TP 
+                        <input type="text" formControlName="TPSI" class="form-control form-control-sm" name="TPSI" id="TPSI">
+                        <small *ngIf="moyenneform.controls['TPSI'].dirty && moyenneform.controls['TPSI'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['TPSI'].dirty && moyenneform.controls['TPSI'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        Oral 
+                        <input type="text" formControlName="OralSI" class="form-control form-control-sm" name="OralSI" id="OralSI">
+                        <small *ngIf="moyenneform.controls['OralSI'].dirty && moyenneform.controls['OralSI'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['OralSI'].dirty && moyenneform.controls['OralSI'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        <br><input type="text" class="form-control form-control-sm" formControlName="moySI" name="moySI" id="moySI" readonly>
+                    </td>
+                    <td>
+                        <br><input type="text" class="form-control form-control-sm" formControlName="creditSI"  name="creditSI" id="creditSI" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">ERP</td>
+                    <td>
+                        EX <input type="text" formControlName="exERP" class="form-control form-control-sm" name="exERP" id="exERP">
+                        <small *ngIf="moyenneform.controls['exERP'].dirty && moyenneform.controls['exERP'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['exERP'].dirty && moyenneform.controls['exERP'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        TP <input type="text" formControlName="tpERP" class="form-control form-control-sm" name="tpERP" id="tpERP">
+                        <small *ngIf="moyenneform.controls['tpERP'].dirty && moyenneform.controls['tpERP'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['tpERP'].dirty && moyenneform.controls['tpERP'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        Oral <input type="text" formControlName="oralERP" class="form-control form-control-sm" name="oralERP" id="oralERP">
+                        <small *ngIf="moyenneform.controls['oralERP'].dirty && moyenneform.controls['oralERP'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['oralERP'].dirty && moyenneform.controls['oralERP'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td><br><input type="text" class="form-control form-control-sm" name="moyERP" id="moyERP" formControlName="moyERP" readonly></td>
+                    <td><br><input type="text" class="form-control form-control-sm" name="creditERP" id="creditERP"  formControlName="creditERP" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="4"> </td>
+                    <td><input type="text" formControlName="moySintegre" class="form-control form-control-sm" name="moySintegre" id="moySintegre" readonly></td>
+                    <td><input type="text" formControlName="creditSintegre" class="form-control form-control-sm" name="creditSintegre" id="creditSintegre" readonly></td>
+                </tr>
+                <!-- genie logiciel et gestion de projet	 -->
+                <tr>
+                    <td scope="row" rowspan="4">genie logiciel et gestion de projet</td>
+                </tr>
+                <tr>
+                    <td>gestion de projet SI</td>
+                    <td>
+                        DS1 <input type="text" formControlName="ds1gstionprojet" class="form-control form-control-sm" id="ds1gstionprojet">
+                        <small *ngIf="moyenneform.controls['ds1gstionprojet'].dirty && moyenneform.controls['ds1gstionprojet'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds1gstionprojet'].dirty && moyenneform.controls['ds1gstionprojet'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        DS2 <input type="text" formControlName="ds2gstionprojet" class="form-control form-control-sm" id="ds2gstionprojet">
+                        <small *ngIf="moyenneform.controls['ds2gstionprojet'].dirty && moyenneform.controls['ds2gstionprojet'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds2gstionprojet'].dirty && moyenneform.controls['ds2gstionprojet'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        TP <input type="text" formControlName="tpgestionprojet" class="form-control form-control-sm" id="tpgestionprojet">
+                        <small *ngIf="moyenneform.controls['tpgestionprojet'].dirty && moyenneform.controls['tpgestionprojet'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['tpgestionprojet'].dirty && moyenneform.controls['tpgestionprojet'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td><br><input type="text" formControlName="moygestionprojet" class="form-control form-control-sm" id="moygestionprojet" readonly></td>
+                    <td><br><input type="text" formControlName="creditgestionprojet" class="form-control form-control-sm" id="creditgestionprojet" readonly></td>
+                </tr>
+                <tr>
+                    <td>Génie logiciel</td>
+                    <td>
+                        DS1 <input type="text" formControlName="ds1genielogiciel" class="form-control form-control-sm" name="ds1genielogiciel" id="ds1genielogiciel">
+                        <small *ngIf="moyenneform.controls['ds1genielogiciel'].dirty && moyenneform.controls['ds1genielogiciel'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds1genielogiciel'].dirty && moyenneform.controls['ds1genielogiciel'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        DS2 <input type="text" formControlName="ds2genielogiciel" class="form-control form-control-sm" name="ds2genielogiciel" id="ds2genielogiciel">
+                        <small *ngIf="moyenneform.controls['ds2genielogiciel'].dirty && moyenneform.controls['ds2genielogiciel'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds2genielogiciel'].dirty && moyenneform.controls['ds2genielogiciel'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        TP <input type="text" formControlName="tpgenielogiciel" class="form-control form-control-sm" name="tpgenielogiciel" id="tpgenielogiciel">
+                        <small *ngIf="moyenneform.controls['tpgenielogiciel'].dirty && moyenneform.controls['tpgenielogiciel'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['tpgenielogiciel'].dirty && moyenneform.controls['tpgenielogiciel'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td><br><input type="text" class="form-control form-control-sm" formControlName="moygenielogiciel" name="moygenielogiciel" id="moygenielogiciel" readonly></td>
+                    <td><br><input type="text" class="form-control form-control-sm" formControlName="creditgenielogiciel"  name="creditgenielogiciel" id="creditgenielogiciel" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="4"></td>
+                    <td><input type="text" formControlName="moygletgp" class="form-control form-control-sm" name="moygletgp" id="moygletgp" readonly></td>
+                    <td><input type="text" formControlName="creditgletgp" class="form-control form-control-sm" name="creditgletgp" id="creditgletgp" readonly></td>
+                </tr>
+                <!-- développement informatique II	 -->
+                <tr>
+                    <td scope="row" rowspan="3">développement informatique II</td>
+                    <td scope="row">Développement Mobile</td>
+                    <td>
+                        EX <input type="text" formControlName="exdevmobile" class="form-control form-control-sm" name="exdevmobile" id="exdevmobile">
+                        <small *ngIf="moyenneform.controls['exdevmobile'].dirty && moyenneform.controls['exdevmobile'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['exdevmobile'].dirty && moyenneform.controls['exdevmobile'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        TP <input type="text" formControlName="tpdevmobile" class="form-control form-control-sm" name="tpdevmobile" id="tpdevmobile">
+                        <small *ngIf="moyenneform.controls['tpdevmobile'].dirty && moyenneform.controls['tpdevmobile'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['tpdevmobile'].dirty && moyenneform.controls['tpdevmobile'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        Oral <input type="text" formControlName="oraldevmobile" class="form-control form-control-sm" name="tpdevmobile" id="oraldevmobile">
+                        <small *ngIf="moyenneform.controls['oraldevmobile'].dirty && moyenneform.controls['oraldevmobile'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['oraldevmobile'].dirty && moyenneform.controls['oraldevmobile'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td><br><input type="text" class="form-control form-control-sm" name="moydevmobile" id="moydevmobile" formControlName="moydevmobile" readonly></td>
+                    <td><br><input type="text" class="form-control form-control-sm" name="creditdevmobile" id="creditdevmobile"  formControlName="creditdevmobile" readonly></td>
+                </tr>
+                <tr>
+                    <td>développement JEE</td>
+                    <td>
+                        DS1 <input type="text" formControlName="ds1jee" class="form-control form-control-sm" name="ds1jee" id="ds1jee">
+                        <small *ngIf="moyenneform.controls['ds1jee'].dirty && moyenneform.controls['ds1jee'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds1jee'].dirty && moyenneform.controls['ds1jee'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        DS2 <input type="text" formControlName="ds2jee" class="form-control form-control-sm" name="ds2jee" id="ds2jee">
+                        <small *ngIf="moyenneform.controls['ds2jee'].dirty && moyenneform.controls['ds2jee'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds2jee'].dirty && moyenneform.controls['ds2jee'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        TP <input type="text" formControlName="tpjee" class="form-control form-control-sm" name="tpjee" id="tpjee">
+                        <small *ngIf="moyenneform.controls['tpjee'].dirty && moyenneform.controls['tpjee'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['tpjee'].dirty && moyenneform.controls['tpjee'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td><br><input type="text" class="form-control form-control-sm" formControlName="moyjee" name="moyjee" id="moyjee" readonly></td>
+                    <td><br><input type="text" class="form-control form-control-sm" formControlName="creditjee" name="creditjee" id="creditjee" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="4"></td>
+                    <td><input type="text" formControlName="moydev" class="form-control form-control-sm" name="moydev" id="moydev" readonly></td>
+                    <td><input type="text" formControlName="creditdev" class="form-control form-control-sm" name="creditdev" id="creditdev" readonly></td>
+                </tr>
+                <!--SI décisionnel	-->
+                <tr>
+                    <td scope="row" rowspan="3">Sciences de la décision	</td>
+                    <td>Business intelligence</td>
+                    <td>
+                        EX <input type="text" formControlName="exbi" class="form-control form-control-sm" name="exbi" id="exbi">
+                        <small *ngIf="moyenneform.controls['exbi'].dirty && moyenneform.controls['exbi'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['exbi'].dirty && moyenneform.controls['exbi'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        TP <input type="text" formControlName="tpbi" class="form-control form-control-sm" id="tpbi">
+                        <small *ngIf="moyenneform.controls['tpbi'].dirty && moyenneform.controls['tpbi'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['tpbi'].dirty && moyenneform.controls['tpbi'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        Oral <input type="text" formControlName="oralbi" class="form-control form-control-sm" id="oralbi">
+                        <small *ngIf="moyenneform.controls['oralbi'].dirty && moyenneform.controls['oralbi'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['oralbi'].dirty && moyenneform.controls['oralbi'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td><br><input type="text" formControlName="moybi" class="form-control form-control-sm" id="moyprevision" readonly></td>
+                    <td><br><input type="text" formControlName="creditbi" class="form-control form-control-sm" id="creditbi" readonly></td>
+                </tr>
+                <tr>
+                    <td>stratégie d'affaire electronique </td>
+                    <td>
+                        DS1 <input type="text" formControlName="ds1sae" class="form-control form-control-sm" id="ds1sae">
+                        <small *ngIf="moyenneform.controls['ds1sae'].dirty && moyenneform.controls['ds1sae'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds1sae'].dirty && moyenneform.controls['ds1sae'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        DS2 <input type="text" formControlName="ds2sae" class="form-control form-control-sm" id="ds2sae">
+                        <small *ngIf="moyenneform.controls['ds2sae'].dirty && moyenneform.controls['ds2sae'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds2sae'].dirty && moyenneform.controls['ds2sae'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        TP <input type="text" formControlName="oralsae" class="form-control form-control-sm" id="oralsae">
+                        <small *ngIf="moyenneform.controls['oralsae'].dirty && moyenneform.controls['oralsae'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['oralsae'].dirty && moyenneform.controls['oralsae'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td><br><input type="text" formControlName="moysae" class="form-control form-control-sm" id="moysae" readonly></td>
+                    <td><br><input type="text" formControlName="creditsae" class="form-control form-control-sm" id="creditsae" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="4"></td>
+                    <td><input type="text" formControlName="moydecision" class="form-control form-control-sm" name="moydecision" id="moydecision" readonly></td>
+                    <td><input type="text" formControlName="creditdecision" class="form-control form-control-sm" name="creditdecision" id="creditdecision" readonly></td>
+                </tr>
+                <!--Soft-skills et Culture 5-->
+                <tr>
+                    <td scope="row" rowspan="3">Soft-skills et<br> Culture 5</td>
+                    <td>gestion de carrière</td>
+                    <td>
+                        DS1 <input type="text" formControlName="ds1gc" class="form-control form-control-sm" id="ds1gc">
+                        <small *ngIf="moyenneform.controls['ds1gc'].dirty && moyenneform.controls['ds1gc'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds1gc'].dirty && moyenneform.controls['ds1gc'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        DS2 <input type="text" formControlName="ds2gc" class="form-control form-control-sm" id="ds2gc">
+                        <small *ngIf="moyenneform.controls['ds2gc'].dirty && moyenneform.controls['ds2gc'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds2gc'].dirty && moyenneform.controls['ds2gc'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        TP <input type="text" formControlName="tpgc" class="form-control form-control-sm" id="tpgc">
+                        <small *ngIf="moyenneform.controls['tpgc'].dirty && moyenneform.controls['tpgc'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['tpgc'].dirty && moyenneform.controls['tpgc'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td><br><input type="text" formControlName="moygc" class="form-control form-control-sm" id="moygc" readonly></td>
+                    <td><br><input type="text" formControlName="creditgc" class="form-control form-control-sm" id="creditgc" readonly></td>
+                </tr>
+                <tr>
+                    <td>Anglais d'affaire</td>
+                    <td>
+                        DS1 <input type="text" formControlName="ds1anglais" class="form-control form-control-sm" id="ds1anglais">
+                        <small *ngIf="moyenneform.controls['ds1anglais'].dirty && moyenneform.controls['ds1anglais'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds1anglais'].dirty && moyenneform.controls['ds1anglais'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        DS2 <input type="text" formControlName="ds2anglais" class="form-control form-control-sm" id="ds2anglais">
+                        <small *ngIf="moyenneform.controls['ds2anglais'].dirty && moyenneform.controls['ds2anglais'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds2anglais'].dirty && moyenneform.controls['ds2anglais'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        TP <input type="text" formControlName="tpanglais" class="form-control form-control-sm" id="tpanglais">
+                        <small *ngIf="moyenneform.controls['tpanglais'].dirty && moyenneform.controls['tpanglais'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['tpanglais'].dirty && moyenneform.controls['tpanglais'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td><br><input type="text" formControlName="moyanglais" class="form-control form-control-sm" id="moyanglais" readonly></td>
+                    <td><br><input type="text" formControlName="creditanglais" class="form-control form-control-sm" id="creditanglais" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="4"></td>
+                    <td><input type="text" formControlName="moysoftskills5" class="form-control form-control-sm" name="moysoftskills5" id="moysoftskills5" readonly></td>
+                    <td><input type="text" formControlName="creditsoftskills5" class="form-control form-control-sm" name="creditsoftskills5" id="creditsoftskills5" readonly></td>
+                </tr>              
+                <!--UEOP_S5(21-22)-->
+                <tr>
+                    <td scope="row" rowspan="3">UEOP_S5(21-22)</td>
+                    <td>Architecture orientée services	</td>
+                    <td>
+                        DS1 <input type="text" formControlName="ds1aos" class="form-control form-control-sm" id="ds1aos">
+                        <small *ngIf="moyenneform.controls['ds1aos'].dirty && moyenneform.controls['ds1aos'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds1aos'].dirty && moyenneform.controls['ds1aos'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        DS2 <input type="text" formControlName="ds2aos" class="form-control form-control-sm" id="ds2aos">
+                        <small *ngIf="moyenneform.controls['ds2aos'].dirty && moyenneform.controls['ds2aos'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds2aos'].dirty && moyenneform.controls['ds2aos'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        TP <input type="text" formControlName="tpaos" class="form-control form-control-sm" id="tpaos">
+                        <small *ngIf="moyenneform.controls['tpaos'].dirty && moyenneform.controls['tpaos'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['tpaos'].dirty && moyenneform.controls['tpaos'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td><br><input type="text" formControlName="moyaos" class="form-control form-control-sm" id="moyaos" readonly></td>
+                    <td><br><input type="text" formControlName="creditaos" class="form-control form-control-sm" id="creditaos" readonly></td>
+                </tr>
+                <tr>
+                    <td>Introduction to machine learning	</td>
+                    <td>
+                        DS1 <input type="text" formControlName="ds1ML" class="form-control form-control-sm" id="ds1ML">
+                        <small *ngIf="moyenneform.controls['ds1ML'].dirty && moyenneform.controls['ds1ML'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds1ML'].dirty && moyenneform.controls['ds1ML'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        DS2 <input type="text" formControlName="ds2ML" class="form-control form-control-sm" id="ds2ML">
+                        <small *ngIf="moyenneform.controls['ds2ML'].dirty && moyenneform.controls['ds2ML'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['ds2ML'].dirty && moyenneform.controls['ds2ML'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td>
+                        TP <input type="text" formControlName="tpML" class="form-control form-control-sm" id="tpML">
+                        <small *ngIf="moyenneform.controls['tpML'].dirty && moyenneform.controls['tpML'].hasError('required')" class="text-danger">*note obligatoire</small>
+                        <small *ngIf="moyenneform.controls['tpML'].dirty && moyenneform.controls['tpML'].hasError('range')" class="text-danger">*note doit être un nombre entre 0 et 20</small>
+                    </td>
+                    <td><br><input type="text" formControlName="moyML" class="form-control form-control-sm" id="moyML"  readonly></td>
+                    <td><br><input type="text" formControlName="creditML" class="form-control form-control-sm" id="creditML"  readonly></td>
+                </tr>       
+                <tr>
+                    <td colspan="4"></td>
+                    <td><input type="text" formControlName="moyUEOP5" class="form-control form-control-sm" name="moyUEOP5" id="moyUEOP5" readonly></td>
+                    <td><input type="text" formControlName="creditUEOP5" class="form-control form-control-sm" name="creditUEOP5" id="creditUEOP5" readonly></td>
+                </tr>         
+                <tr>
+                    <td colspan="5">Moyenne de semestre et credit</td>
+                    <td><input type="text" formControlName="moy"  class="form-control form-control-sm" name="moy" id="moy" readonly></td>
+                    <td><input type="text" formControlName="credit" class="form-control form-control-sm" name="credit" id="credit" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>

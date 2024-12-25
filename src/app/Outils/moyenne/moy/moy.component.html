@@ -1,0 +1,71 @@
+<div class="btn-group">
+    <div class="btn-row">
+        <a 
+            routerLink="/moyenne/sem1" 
+            class="btn" 
+            [class.selected]="isSelected('sem1')" 
+            (click)="selectButton('sem1')">
+            BC sem1
+        </a>
+        <a 
+            routerLink="/moyenne/sem2" 
+            class="btn" 
+            [class.selected]="isSelected('sem2')" 
+            (click)="selectButton('sem2')">
+            BC sem2
+        </a>
+        <a 
+            routerLink="/moyenne/sem3" 
+            class="btn" 
+            [class.selected]="isSelected('sem3')" 
+            (click)="selectButton('sem3')">
+            BC sem3
+        </a>
+    </div>
+    <div class="btn-row">
+        <a 
+            routerLink="/moyenne/sem4bi" 
+            class="btn" 
+            [class.selected]="isSelected('sem4bi')" 
+            (click)="selectButton('sem4bi')">
+            BI sem4
+        </a>
+        <a 
+            routerLink="/moyenne/sem4eb" 
+            class="btn" 
+            [class.selected]="isSelected('sem4eb')" 
+            (click)="selectButton('sem4eb')">
+            EB sem4
+        </a>
+        <a 
+            routerLink="/moyenne/sem4bis" 
+            class="btn" 
+            [class.selected]="isSelected('sem4bis')" 
+            (click)="selectButton('sem4bis')">
+            BIS sem4
+        </a>
+    </div>
+    <div class="btn-row">
+        <a 
+            routerLink="/moyenne/sem5bi" 
+            class="btn" 
+            [class.selected]="isSelected('sem5bi')" 
+            (click)="selectButton('sem5bi')">
+            BI sem5
+        </a>
+        <a 
+            routerLink="/moyenne/sem5eb" 
+            class="btn" 
+            [class.selected]="isSelected('sem5eb')" 
+            (click)="selectButton('sem5eb')">
+            EB sem5
+        </a>
+        <a 
+            routerLink="/moyenne/sem5bis" 
+            class="btn" 
+            [class.selected]="isSelected('sem5bis')" 
+            (click)="selectButton('sem5bis')">
+            BIS sem5
+        </a>
+    </div>
+</div>
