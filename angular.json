@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FsegnBC": {
+    "FsegnBC_MoyCalcul": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -28,7 +28,6 @@
               "src/assets/images"
             ],
             "styles": [
-              "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
@@ -74,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "FsegnBC:build:production"
+              "browserTarget": "FsegnBC_MoyCalcul:build:production"
             },
             "development": {
-              "browserTarget": "FsegnBC:build:development"
+              "browserTarget": "FsegnBC_MoyCalcul:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FsegnBC:build"
+            "browserTarget": "FsegnBC_MoyCalcul:build"
           }
         },
         "test": {
@@ -108,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "FsegnBC"
+  "defaultProject": "FsegnBC_MoyCalcul"
 }
