@@ -11,6 +11,7 @@ export class MoyComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   selectedButton: string | null = null;
 
   selectButton(buttonId: string): void {

@@ -1,8 +1,8 @@
 .table {
-    display: table; 
-    width: calc(100% - 100px); 
+    display: table;
+    width: 100%;
     border-collapse: collapse;
-    margin: 0 50px; 
+    margin: 0 auto;
 }
 
 td, th {
@@ -16,10 +16,36 @@ h3 {
     text-align: center;
 }
 
-
-
 .table td, .table th {
     text-align: center;
     background-color: #f4f4f4;
     vertical-align: middle;
+}
+
+input[type="text"] {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .table {
+        width: 100%;
+        margin: 0 10px;
+    }
+
+    td, th {
+        padding: 5px; 
+    }
+
+    input[type="text"] {
+        width: 60px; 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    input[type="text"] {
+        width: 70px;
+    }
 }

@@ -14,6 +14,7 @@ import { Sem4bisComponent } from './Outils/moyenne/sem4bis/sem4bis.component';
 import { Sem5biComponent } from './Outils/moyenne/sem5bi/sem5bi.component';
 import { Sem5ebComponent } from './Outils/moyenne/sem5eb/sem5eb.component';
 import { Sem5bisComponent } from './Outils/moyenne/sem5bis/sem5bis.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { Sem5bisComponent } from './Outils/moyenne/sem5bis/sem5bis.component';
     Sem5biComponent,
     Sem5ebComponent,
     Sem5bisComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

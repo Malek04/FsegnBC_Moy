@@ -14,7 +14,6 @@ import { Sem5ebComponent } from './Outils/moyenne/sem5eb/sem5eb.component';
 
 const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
-  {path: 'moyenne', component: MoyComponent},
   //bc
   {path: 'moyenne/sem1', component: Sem1bcComponent},
   {path: 'moyenne/sem2', component: Sem2bcComponent},

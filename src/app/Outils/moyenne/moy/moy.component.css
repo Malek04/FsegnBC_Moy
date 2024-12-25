@@ -1,68 +1,66 @@
 .btn-group {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
   gap: 1rem; 
-  padding: 0;
+  padding-right: 50%;
+  padding-left:50%;
   box-sizing: border-box;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto; 
+  max-width: 100%; 
+  margin: 0 auto;
 }
 
 .btn-group .btn {
   background-color: #e38b0d;
   border-radius: 0.25rem;
-  padding: 0.5rem 1rem; 
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: white;
-  text-align: center; 
+  text-align: center;
   transition: background-color 0.3s, transform 0.2s;
-  border: none; 
+  border: none;
   text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0; 
+  min-width: 100px; 
+  max-width: 150px;
 }
 
 .btn-group .btn:hover {
   background-color: #065363;
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .btn-group .btn.selected {
-  background-color: #065363; 
-  transform: scale(1); 
-}
-
-.btn-row {
-  display: flex;
-  justify-content: center; 
-  flex-wrap: wrap;
-  gap: 1rem; 
-  width: 100%; 
+  background-color: #065363;
+  transform: scale(1);
 }
 
 @media (min-width: 1024px) {
   .btn-group {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .btn-row {
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem; 
   }
 
   .btn {
-    flex: 1;
-    text-align: center;
+    font-size: 1rem; 
+    width: auto;
   }
 }
 
 @media (max-width: 767px) {
   .btn-group {
-    margin-top: 10px; 
+    padding-right: 80%;
+    padding-left:90%;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem; 
+    justify-content: center; 
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    min-width: 100px;
+    max-width: 100%; 
   }
 }
