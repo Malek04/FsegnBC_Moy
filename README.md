@@ -1,8 +1,8 @@
 
 ## FsegnBC 
 
-FsegnBC is a simple and user-friendly tool designed to help students of the FSEGN Business Computing program efficiently calculate their academic mean.
-
+FsegnBC Moy_Calcul is a simple and user-friendly tool designed to help students of the FSEGN Business Computing program efficiently calculate their academic mean.
+You can access directly through this link: [FsegnBC Moy_Calcul](https://fsegnbc-moycalcul.web.app/)
 ### Technologies Used
 - **HTML5**
 - **CSS3**
@@ -17,7 +17,7 @@ FsegnBC is a simple and user-friendly tool designed to help students of the FSEG
 ### How to Run the Project locally
 1. **Clone the repository**:  
    ```bash
-   git clone https://github.com/Malek04/FsegnBC.git
+   git clone https://github.com/Malek04/FsegnBC_Moy.git
    cd FsegnBC
 2. **Ensure Required Tools are Installed**:  
    - Make sure you have **npm** (Node Package Manager) installed.  
@@ -36,3 +36,5 @@ FsegnBC is a simple and user-friendly tool designed to help students of the FSEG
     ```
 5. **Navigate to the app**:
 Open your browser and go to http://localhost:4200/.
+
+Feel free to contribute!
